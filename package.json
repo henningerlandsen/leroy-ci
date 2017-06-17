@@ -4,7 +4,8 @@
   "description": "A tiny CI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node leroy.js"
   },
   "repository": {
     "type": "git",
