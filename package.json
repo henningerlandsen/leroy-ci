@@ -1,0 +1,23 @@
+{
+  "name": "leroy-ci",
+  "version": "1.0.0",
+  "description": "A tiny CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henningerlandsen/leroy-ci.git"
+  },
+  "keywords": [
+    "distributed",
+    "ci"
+  ],
+  "author": "Henning Erlandsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henningerlandsen/leroy-ci/issues"
+  },
+  "homepage": "https://github.com/henningerlandsen/leroy-ci#readme"
+}
