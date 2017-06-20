@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/henningerlandsen/leroy-ci/issues"
   },
-  "homepage": "https://github.com/henningerlandsen/leroy-ci#readme"
+  "homepage": "https://github.com/henningerlandsen/leroy-ci#readme",
+  "dependencies": {
+    "nodemon": "1.11.0"
+  }
 }
