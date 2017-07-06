@@ -1,17 +1,17 @@
-const http = require('http');
 const fs = require('fs');
 const util = require('util');
+const express = require('express')
+const app = express()
 
 
-http.createServer(function (req, result) {
-    result.writeHead(200, {'Content-Type': 'text/plain'});
-    
-    const readdir = util.promisify(fs.readdir);
+app.get('/jobs', function (req, res) {
+   const readdir = util.promisify(fs.readdir);
 
     readdir("jobs").then((jobslist) => {
-    	result.end(jobslist.join(','));
-    }).catch((error) => {
-    	console.log('Error reading directory', error)
-    	result.end('No jobs found in ./jobs directory')
+    	res.json(jobslist);
     });
-}).listen(8080);
+})
+
+app.listen(8080, function () {
+  console.log('Example app listening on port 8080!')
+})
