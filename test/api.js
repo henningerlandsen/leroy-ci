@@ -17,7 +17,7 @@ function endpoint(url, test) {
     describe(url, test);
 }
 
-function request(method, test) {
+function test_request(method, test) {
     const m = method.toLowerCase();
     return chakram[m](globals.currentUrl).then(test);
 }
@@ -25,7 +25,7 @@ function request(method, test) {
 function disabled(method) {
     describe(method, function() {
         it('is disabled', function() {
-            return request(method, function(response) {
+            return test_request(method, function(response) {
                 expect(response).to.have.status(405);
             });
         });
@@ -35,7 +35,7 @@ function disabled(method) {
 function result(method, expected_response) {
     describe(method, function() {
         it(`returns ${expected_response}`, function() {
-            return request(method, function(actual_res) {
+            return test_request(method, function(actual_res) {
                 expect(actual_res).to.have.status(200);
                 expect(actual_res).to.be.json(expected_response);
             });
